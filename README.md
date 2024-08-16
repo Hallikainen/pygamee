@@ -16,7 +16,7 @@
 ![image](https://github.com/user-attachments/assets/f7a3ef32-4f99-4c6f-8a43-d7c74293b82e)
 
 <div>
-  <p>RoboJump 3000 is a classic platform game where the the player is a robot who needs to stay alive while the platforms are moving down.
+  <p>RoboJump 3000 is a classic platform game where the the player is a robot who needs to jump from a platform upwards to another to stay in the game. The goal is to collect as many coins as possible. The mörkös (ghosts) and the increasing speed of the platforms increases the difficulty the more coins are collected (or passed). 
      </p>
 </div>
 
