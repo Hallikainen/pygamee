@@ -1,6 +1,6 @@
 <br />
-<div align="center">
-  <h1 align="left">The highlights of my python projects</h1>
+<div align="left">
+  <h1>The highlights of my python projects</h1>
   <p>testing testing</p>
 </div>
 
