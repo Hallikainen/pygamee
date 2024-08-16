@@ -25,7 +25,12 @@
 <div>
   <p>RoboJump 3000 is a classic platformer game where the player controls a robot that needs to jump from one platform to another to stay in the game. The goal is to collect as many coins as possible. The difficulty increases incrementally due to the presence of ghosts (known as "mörkö") and the increasing speed of the platforms.
   </p>
-  <p>The animation of the game was created with a Python module called <a href="https://en.wikipedia.org/wiki/Pygame">Pygame</a>.
+  <p>The animation of the game was created with a Python module called <a href="https://en.wikipedia.org/wiki/Pygame">Pygame</a>. The logic in the code is briefly the following:
+    <ul>
+      <li>The platforms, coins and ghosts are groups of images which coordinates are defined in a dictionary.</li>
+      <li>All elements (except for the robot) move down at a predefined speed which increases incrementally.</li>
+      <li>There is a while loop which changes the coordinates of those elements on each round. It also checks if the robot is moving, if it hits a coin or a ghost or if it falls out of the game.</li>
+    </ul>
   </p>
   
 </div>
