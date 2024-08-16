@@ -8,10 +8,10 @@
     <li>Radial fade filter for images</li>
     <li>A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</li>
 </div>
-<div align="left">
-  <h3>RoboJump 3000</h3>
+    
+
+<h3>RoboJump 3000</h3>
 ![image](https://github.com/user-attachments/assets/56227c44-2965-4f61-a20a-68b41a706939)
-</div>
 
 
 
