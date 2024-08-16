@@ -1,26 +1,26 @@
 import pygame
 import random
 import os
-from screeninfo import get_monitors
+# from screeninfo import get_monitors
 import csv
 
 class Robojump:
     def __init__(self):
         pygame.init()
-        #poista kommentointi jos haluat että peli aukeaa toiselle näytölle 
+        #remove hashtags below and the import of get_monitors request in case you want to open the game on the another screen
         # naytot = get_monitors()
         # toinen_naytto = naytot[1]
         # x = toinen_naytto.x
         # y = toinen_naytto.y
         # os.environ['SDL_VIDEO_WINDOW_POS'] = f"{x},{y}"
         
-        #näyttömäärittely sekä otsikko
+        #defining the screen size and the title
         self.naytto = pygame.display.set_mode((640, 480))
         self.nayton_leveys = 800
         self.nayton_korkeus = 600
         pygame.display.set_caption("RoboJump 3000")
         
-        #parametrien alustus
+        #initialize parameters
         self.kuolemat = 0
         self.tekstiruutu = True
         self.intro = True
@@ -31,107 +31,108 @@ class Robojump:
         self.pelaa = True
         self.pisteet = 0
         
-        #ladataan kuvat
+        #load the images
         self.lataa_kuvat()
         
-        #pisteet
+        #score
         self.max_pisteet = 0
         self.pisteet = 0
         self.uusi_ennatys = False
         
-        #pelin toinen alustus
+        #game initialization
         self.valialustus()
 
     def valialustus(self):
-        #alustetaan parametrit
+        #initialize parameters
         self.vakio_parametrit()
         self.muuttuvat_parametrit()   
         
-        #avataan tekstiruutu
+        #text box
         if self.tekstiruutu:
             self.silmukka()
         
-        #pelaamaan
+        #game
         elif self.pelaa:
-            #luodaan tasot
+            #define platforms
             self.luodaan_tasot()
-            #luodaan kolikot
+            #define coins 
             self.luodaan_kolikot()
-            #luodaan morot
+            #define mörkös
             self.luodaan_morot()
-            #kello
+            #define the clock
             self.clock = pygame.time.Clock()
-            #silmukkaan
+            #loop
             self.silmukka()
 
     def ennatykset(self):
-        #lue ennätykset
-        with open("/Users/vapaaeero/Documents/opinnot/opinnot/ohjelmoinnin-perusteet/tmcdata/mooc-ohjelmointi-2024/osa14-01_pelin_palautus/src/ennatys.txt", "r") as tiedosto:
+        #read in the records from the file
+        with open("record.txt", "r") as tiedosto:
             ennatys = tiedosto.read()
             if len(ennatys) != 0:
                 ennatys = int(ennatys)
             else:
                 ennatys = 0
             pisteet = self.max_pisteet
-            #rikkoutuiko ennätys?
+            #new record?
             if pisteet > ennatys:
                 self.uusi_ennatys = True
                 ennatys_rivi = str(pisteet)
             
-                #tallennetaan uusi ennätys
-                with open("/Users/vapaaeero/Documents/opinnot/opinnot/ohjelmoinnin-perusteet/tmcdata/mooc-ohjelmointi-2024/osa14-01_pelin_palautus/src/ennatys.txt", "w") as tiedosto:
+                #save the new record 
+                with open("record.txt", "w") as tiedosto:
                     tiedosto.write(ennatys_rivi)
 
     def vakio_parametrit(self):
-        #tasot
-        #lähtötason koordinaatit
+        #platforms
+        #the first platform
         self.lt_x1 = 20
         self.lt_x2 = 200
         self.lt_y = 480
         
-        #tasojen nopeus
+        #velocity of the platforms
         self.tasot_v = 1.5
         
-        #alkukoordinaatit
+        #coordinates of the robot in the beginning
         self.robo_x = 320
         self.robo_y = 230-self.robo_height
         
-        #nopeudet 
+        #velocities of the robot
         self.robo_v_y = 0
         self.robo_v_x = 4
         self.painovoima = 0.5
         self.hyppynopeus = -11
         
-        #morot
+        #velocity of the mörkös
         self.morko_v = 2   
         
-        #välitekstit
+        #texts after the death 
         self.aloitusaika = pygame.time.get_ticks()
         self.tekstiaika = 2000
 
     def muuttuvat_parametrit(self):
-        #robotin ohjailu
+        #moving the robot 
         self.hyppaa = False
         self.oikealle = False
         self.vasemmalle = False
         
-        #muut
+        #lives
         self.elamat = 3 - self.kuolemat
 
     def lataa_kuvat(self):
-        #robo
-        self.robo = pygame.image.load("robo.png")
+        #robo image
+        self.robo = pygame.image.load("images/robo.png")
         
-        #korkeus ja leveys 
+        #height and width of the robot
         self.robo_height = self.robo.get_height()
         self.robo_width = self.robo.get_width()
         
-        #muut kuvat
-        self.kolikko = pygame.image.load("kolikko.png")
-        self.morko = pygame.image.load("hirvio.png")
+        #other images 
+        self.kolikko = pygame.image.load("images/kolikko.png")
+        self.morko = pygame.image.load("images/hirvio.png")
         self.elama = pygame.transform.scale(self.robo, (self.robo_width/3, self.robo_height/3))
 
     def luodaan_tasot(self):
+        #define the platforms
         self.tasot = []
         y = 200
         eka_taso = {"x1" : 0, "x2" : 640, "y" : 240, "n" : 0}
@@ -172,8 +173,7 @@ class Robojump:
             y = y - random.randint(400, 1000)
             self.morot.append({"x" : x, "y" : y})
 
-    def silmukka(self):
-        #pelaamaan 
+    def silmukka(self): 
         while self.pelaa and not self.tekstiruutu:
             self.tasot_liikkuu()
             self.kolikot_liikkuu()
@@ -188,7 +188,7 @@ class Robojump:
             self.piirra_naytto()
 
     def tasot_liikkuu(self):
-        #määritetään nopeus
+        #moving the platforms
         for taso in self.tasot:
             if taso["n"] > 30 and taso["y"] > 0:
                 self.tasot_v = 2
@@ -202,6 +202,7 @@ class Robojump:
             taso["y"] += self.tasot_v
 
     def kolikot_liikkuu(self):
+        #moving the coins
         for kol in self.kolikot:
             if kol["y"] < 500:
                 kol["y"] += self.tasot_v
@@ -215,14 +216,15 @@ class Robojump:
                     self.pisteet += 1
     
     def morot_liikkuu(self):
+        #moving mörkös
         for morko in self.morot:
             if morko["y"] < 500:
                 morko["y"] += self.tasot_v + random.uniform(0.5, 6)
             
-            #x-suuntainen mörköosuma
+            #robo hit the mörkö on x-axis
             if abs(self.robo_x - morko["x"]) < self.robo_width/2 + 20:
                 
-                #y-suuntainen mörköosuma
+                #robo hit the mörkö on y-axis
                 if abs(self.robo_y + 20 - morko["y"]) < self.robo_width + 20:
                     self.kuolemat += 1
                     self.valikuolema = True
@@ -234,11 +236,12 @@ class Robojump:
                     self.valialustus()
                     
     def tutki_tapahtumat(self):
+        #events
         for tapahtuma in pygame.event.get():
             if tapahtuma.type == pygame.QUIT:
                 exit() 
 
-            #robon liikkeeseen vaikuttavat tapahtumat
+            #events affecting the position of the robot
             if tapahtuma.type == pygame.KEYDOWN and self.pelaa:
                 if tapahtuma.key == pygame.K_UP and not self.hyppaa:
                     self.robo_v_y = self.hyppynopeus
@@ -254,7 +257,7 @@ class Robojump:
                 if tapahtuma.key == pygame.K_LEFT:
                     self.vasemmalle = False           
             
-            #loppuruudun valikot (restart tai exit)
+            #texts after a death
             if tapahtuma.type == pygame.KEYDOWN and self.loppukuolema:
                 if tapahtuma.key == pygame.K_r:
                     self.loppukuolema = False
@@ -267,18 +270,18 @@ class Robojump:
         pygame.time.Clock().tick(60)
 
     def robo_liikkuu(self):
-        #robon hyppy
+        #robo jumping
         self.robo_v_y += self.painovoima
         self.robo_y += self.robo_v_y
         
-        #robo sivuille 
+        #robo moving to sides
         if self.oikealle == True:
             self.robo_x += self.robo_v_x
         if self.vasemmalle == True:
             self.robo_x -= self.robo_v_x
         self.pysy_tasolla()
         
-        #robo tippuu
+        #robo falling
         if self.robo_y > 480:
             self.kuolemat += 1
             self.valikuolema = True
@@ -293,10 +296,10 @@ class Robojump:
     def pysy_tasolla(self):
         for taso in self.tasot:
             
-            #onko robotti tason yläpuolella ja putoaako se
+            #is the robot above a platform and is it falling
             if abs(taso["y"] - (self.robo_y + self.robo_height)) < 5:
                 
-                #osuuko se tason x-koordinaattien väliin
+                #is the robot falling on a platform 
                 if taso["x1"] - self.robo_width < self.robo_x < taso["x2"] and self.robo_v_y > 0: 
                     self.robo_y = taso["y"] - self.robo_height
                     self.robo_v_y = 0
@@ -305,43 +308,43 @@ class Robojump:
     def piirra_naytto(self):
         if self.pelaa and self.tekstiruutu is False:
             
-            #tausta
+            #draw the background
             self.naytto.fill((51, 255, 255))
             
-            #piirrä robo
+            #draw the robot
             self.naytto.blit(self.robo, (self.robo_x, self.robo_y))
             
-            #piirrä tasot
+            #draw the platforms
             for taso in self.tasot:
                 pygame.draw.line(self.naytto, (255, 51, 255), (taso["x1"], taso["y"]), (taso["x2"], taso["y"]), 5)
             
-            #piirrä kolikot
+            #draw the couns
             i = 1
             for kol in self.kolikot:
                 self.naytto.blit(self.kolikko, (kol["x"], kol["y"]))
                 i += 1
             
-            #piirrä pisteet
+            #draw the score
             fontti = pygame.font.SysFont('Courier New', 22)
             teksti = fontti.render(f"pisteet: {self.pisteet}", True, (0, 0, 0))
             self.naytto.blit(teksti, (490, 20))
             
-            #piirra möröt
+            #draw the mörkös
             for morko in self.morot:
                 self.naytto.blit(self.morko, (morko["x"], morko["y"]))
             
-            #piirrä elamat
+            #draw the lives
             for i in range(self.elamat):
                 self.naytto.blit(self.elama, (20+i*20, 20)) 
             
             pygame.display.flip()
 
-        #piirrä tekstiruudut
+        #draw the text boxes 
         if self.tekstiruutu:
             aika_nyt = pygame.time.get_ticks()
             kulunut_aika = aika_nyt - self.aloitusaika
             
-            #introtekstit
+            #intro texts
             if self.intro:
                 fontti = pygame.font.SysFont('Courier New', 24)
                 teksti = fontti.render("RoboJump 3000 käynnistyy...", True, (20, 0, 20))
@@ -354,16 +357,16 @@ class Robojump:
                     self.intro = False
                     self.valialustus()
             
-            #välikuolema-tekstit
+            #texts between the games
             elif self.valikuolema:
                 fontti = pygame.font.SysFont('Courier New', 24)
                 
-                #mörköosuma
+                #hit the mörkö
                 if self.morko_osuma:
                     teksti = f"Osuit mörköön! Elämiä jäljellä: {self.elamat}"
                     teksti_muotoilu = fontti.render(teksti, True, (0, 0, 0))
                 
-                #tippuminen
+                #falling out
                 if self.tippuminen:
                     teksti = f"Tipahdit! Elämiä jäljellä: {self.elamat}"
                     teksti_muotoilu = fontti.render(teksti, True, (0, 0, 0))
@@ -377,7 +380,7 @@ class Robojump:
                     self.tippuminen = False 
                     self.valialustus()
 
-            #loppukuolema-tekstit
+            #texts after a death
             elif self.loppukuolema:
                 fontti = pygame.font.SysFont('Courier New', 24)
                 teksti = fontti.render('Peli päättyi!', True, (0, 0, 0))
