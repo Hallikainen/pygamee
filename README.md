@@ -10,9 +10,10 @@
   </ul>
 </div>
 
-<div>
-  <h3>RoboJump 3000</h3>  
+
+<h3>RoboJump 3000</h3>  
 ![image](https://github.com/user-attachments/assets/f7a3ef32-4f99-4c6f-8a43-d7c74293b82e)
+<div>
   <p>RoboJump 3000 is a classic platform game where the player is a robot who needs to stay alive. </p>
 </div>
 
