@@ -33,6 +33,7 @@ In this repository I have collected some of the coolest python projects I have d
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+<img width="624" alt="RoboJump 3000" src="https://github.com/user-attachments/assets/3fe135a2-4a11-4b66-80c8-3e1c33f7e1de">
 
 
 <!-- PROJECT LOGO -->
