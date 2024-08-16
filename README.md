@@ -7,23 +7,16 @@
     <li>RoboJump 3000 - a platform game made with Python's Pygame module</li>
     <li>Radial fade filter for images</li>
     <li>A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</li>
+  </ul>
 </div>
-    
+
 <div>
   <h3>RoboJump 3000</h3>  
+  ![image](https://github.com/user-attachments/assets/f79c0298-0ab9-40e8-9e0a-aa6c000470f0)
+  <p>RoboJump 3000 is a platform </p>
 </div>
-![image](https://github.com/user-attachments/assets/f79c0298-0ab9-40e8-9e0a-aa6c000470f0)
 
 
-
-
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a id="readme-top"></a>
-<!--
-
-
-
-![image](https://github.com/user-attachments/assets/e0b0afc2-fff9-4d65-a1b9-e25d6a436bad)
 
 
 
