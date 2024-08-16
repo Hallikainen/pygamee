@@ -4,14 +4,16 @@
   <!--intro paragraph -->
   <p>In this repository I have collected some of the coolest python projects I have done during the coding studies:</p>
   <ul>
-    <li>RoboJump 3000 - a platform game made with Python's Pygame module</li>
+    <li>
+      <a href="#robojump">RoboJump 3000 - a platform game made with Python's Pygame module</a>
+    </li>
     <li>Radial fade filter for images</li>
     <li>A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</li>
   </ul>
 </div>
 
 
-<h3>RoboJump 3000</h3>  
+<h3 id="robojump">RoboJump 3000</h3>  
 
 ![image](https://github.com/user-attachments/assets/f7a3ef32-4f99-4c6f-8a43-d7c74293b82e)
 
