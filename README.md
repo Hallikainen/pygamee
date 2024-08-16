@@ -1,4 +1,4 @@
-# A collection of python projects
+# The highlights of my python projects
 
 In this repository I have collected some of the coolest python projects I have done during the coding studies:
 - RoboJump 3000 - a platform game made with Python's Pygame module
