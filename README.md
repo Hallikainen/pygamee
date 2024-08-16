@@ -9,9 +9,11 @@
     <li>A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</li>
 </div>
     
+<div>
+  <h3>RoboJump 3000</h3>  
+</div>
+![image](https://github.com/user-attachments/assets/f79c0298-0ab9-40e8-9e0a-aa6c000470f0)
 
-<h3>RoboJump 3000</h3>
-![image](https://github.com/user-attachments/assets/56227c44-2965-4f61-a20a-68b41a706939)
 
 
 
