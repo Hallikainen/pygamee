@@ -10,7 +10,9 @@
     <li>
       <a href=#radialfade">Radial fade filter for images</a>
     </li>
-    <li>A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</li>
+    <li>
+      <a href=#probabilistic">A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</a>  
+    </li>  
   </ul>
 </div>
 
