@@ -1,6 +1,6 @@
-# README template
+# A collection of python projects
 
-Template for a feature rich and easy to read README
+In this repository I have collected some of the coolest python projects I have done in my coding studies. 
 
 ## Intro
 
