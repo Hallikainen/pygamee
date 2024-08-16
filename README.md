@@ -1,4 +1,9 @@
-# The highlights of my python projects
+<br />
+<div align="center">
+  <h3 align="center">The highlights of my python projects</h3>
+</div>
+
+
 
 In this repository I have collected some of the coolest python projects I have done during the coding studies:
 - RoboJump 3000 - a platform game made with Python's Pygame module
@@ -8,6 +13,7 @@ In this repository I have collected some of the coolest python projects I have d
 
 
 #RoboJump 3000
+
 ![image](https://github.com/user-attachments/assets/56227c44-2965-4f61-a20a-68b41a706939)
 
 
@@ -25,11 +31,9 @@ In this repository I have collected some of the coolest python projects I have d
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  
 
-  <h3 align="center">Best-README-Template</h3>
+
 
   <p align="center">
     An awesome README template to jumpstart your projects!
