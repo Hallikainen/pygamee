@@ -16,7 +16,8 @@
 ![image](https://github.com/user-attachments/assets/f7a3ef32-4f99-4c6f-8a43-d7c74293b82e)
 
 <div>
-  <p>RoboJump 3000 is a classic platform game where the player is a robot who needs to stay alive. </p>
+  <p>RoboJump 3000 is a classic platform game where the the player is a robot who needs to stay alive while the platforms are moving down.
+     </p>
 </div>
 
 
