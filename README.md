@@ -6,6 +6,10 @@ In this repository I have collected some of the coolest python projects I have d
 - A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)
 
 
+
+![image](https://github.com/user-attachments/assets/56227c44-2965-4f61-a20a-68b41a706939)
+
+
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
 <!--
