@@ -1,6 +1,10 @@
 # A collection of python projects
 
-In this repository I have collected some of the coolest python projects I have done in my coding studies. 
+In this repository I have collected some of the coolest python projects I have done during the coding studies:
+- RoboJump 3000 - a platform game made with Python's Pygame module
+- Radial fade filter for images
+- A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)
+
 
 ## Intro
 
