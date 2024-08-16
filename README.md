@@ -13,7 +13,7 @@
 <div>
   <h3>RoboJump 3000</h3>  
   ![image](https://github.com/user-attachments/assets/f79c0298-0ab9-40e8-9e0a-aa6c000470f0)
-  <p>RoboJump 3000 is a platform </p>
+  <p>RoboJump 3000 is a classic platform game where the player is a robot who needs to stay alive. </p>
 </div>
 
 
