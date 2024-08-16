@@ -16,6 +16,7 @@
   </ul>
 </div>
 
+<hr>
 
 <h3 id="robojump">RoboJump 3000</h3>  
 
