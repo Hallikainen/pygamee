@@ -27,12 +27,11 @@
   </p>
   <p>The animation of the game was created with a Python module called <a href="https://en.wikipedia.org/wiki/Pygame">Pygame</a>. The logic in the code is briefly the following:
     <ul>
-      <li>The platforms, coins and ghosts are groups of images which coordinates are defined in a dictionary.</li>
-      <li>All elements (except for the robot) move down at a predefined speed which increases incrementally.</li>
-      <li>There is a while loop which changes the coordinates of those elements on each round. It also checks if the robot is moving, if it hits a coin or a ghost or if it falls out of the game.</li>
+      <li>The platforms, coins, and ghosts are represented as groups of images, with their coordinates defined in a dictionary.</li>  
+      <li>All elements (except for the robot) move downward at a predefined speed, which increases incrementally.</li>
+      <li>A while loop updates the coordinates of these elements in each iteration. It also checks if the robot is moving, if it collects a coin or encounters a ghost, or if it falls out of the game.</li>
     </ul>
   </p>
-  
 </div>
 
 
