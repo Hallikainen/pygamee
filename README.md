@@ -8,7 +8,7 @@
       <a href="#robojump">RoboJump 3000 - a platform game made with Python's Pygame module</a>
     </li>
     <li>
-      <a href=#radialfade">Radial fade filter for an image</a>
+      <a href="#radialfade">Radial fade filter for an image</a>
     </li>
     <li>
       <a href=#probabilistic">A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</a>  
