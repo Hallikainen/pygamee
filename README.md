@@ -19,9 +19,8 @@
 <hr>
 
 <h3 id="robojump">RoboJump 3000</h3>  
-<div>
 ![image](https://github.com/user-attachments/assets/f7a3ef32-4f99-4c6f-8a43-d7c74293b82e)
-</div>
+
 
 <div>
   <p>RoboJump 3000 is a classic platformer game where the player controls a robot that needs to jump from one platform to another to stay in the game. The goal is to collect as many coins as possible. The difficulty increases incrementally due to the presence of ghosts (known as "mörkö") and the increasing speed of the platforms. This game project was a part of course called "Python programming MOOC" offered by Helsinki University. 
