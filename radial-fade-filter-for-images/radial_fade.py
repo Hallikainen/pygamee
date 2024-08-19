@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -55,8 +53,7 @@ def radial_fade(image):
     return image_mod
 
 def main():
-    # os.chdir("/Users/vapaaeero/Documents/opinnot/opinnot/data_analysis_with_python/mooc-data-analysis-with-python-2023-2024/part03-e12_radial_fade")
-    image = plt.imread("src/painting.png")
+    image = plt.imread("painting.png")
     mask = radial_mask(image)
     image_mod = radial_fade(image)
     
@@ -65,7 +62,6 @@ def main():
     axes[0].imshow(image)
     axes[1].imshow(mask)
     axes[2].imshow(image_mod)
-
     plt.show()
 
 if __name__ == "__main__":
