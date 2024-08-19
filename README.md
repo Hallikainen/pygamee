@@ -8,7 +8,7 @@
       <a href="#robojump">RoboJump 3000 - a platform game made with Python's Pygame module</a>
     </li>
     <li>
-      <a href=#radialfade">Radial fade filter for images</a>
+      <a href=#radialfade">Radial fade filter for an image</a>
     </li>
     <li>
       <a href=#probabilistic">A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</a>  
@@ -28,7 +28,24 @@
   <p>The animation of the game was created with a Python module called <a href="https://en.wikipedia.org/wiki/Pygame">Pygame</a>. The logic in the code is briefly the following:
     <ul>
       <li>The platforms, coins, and ghosts are represented as groups of images, with their coordinates defined in a dictionary.</li>  
-      <li>All elements (except for the robot) move downward at a predefined speed, which increases incrementally.</li>
+      <li>All elements (except for the robot) move downward at a predefined speed, which increases incrementally and makes it harder to stay in the game.</li>
+      <li>A while loop updates the coordinates of these elements in each iteration. It also checks if the robot is moving, if it collects a coin or encounters a ghost, or if it falls out of the game.</li>
+    </ul>
+  </p>
+</div>
+
+
+<h3 id="radial_fade">Radial fade filter for an image</h3>h3>
+
+<img width="265" alt="image" src="https://github.com/user-attachments/assets/4a3036cf-b2b9-4ec5-a871-cd56c3f45633">
+
+<div>
+  <p>Radial fade filter makes a fading for an image in radial direction. In other words, as we move away from the centre of the image, the pixels fade to black. This was a part of a programming course offered by Helsinki University. 
+  </p>
+  <p>The filter was written in Python and the logic of the code is briefly the following:
+    <ul>
+      <li></li>  
+      <li>All elements (except for the robot) move downward at a predefined speed, which increases incrementally and makes it harder to stay in the game.</li>
       <li>A while loop updates the coordinates of these elements in each iteration. It also checks if the robot is moving, if it collects a coin or encounters a ghost, or if it falls out of the game.</li>
     </ul>
   </p>
@@ -37,27 +54,6 @@
 
 
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  
-
-
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
-</div>
 
 
 
