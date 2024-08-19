@@ -38,7 +38,7 @@
 <h3 id="radial_fade">Radial fade filter for an image</h3>
 
 <img width="265" alt="image" src="https://github.com/user-attachments/assets/4a3036cf-b2b9-4ec5-a871-cd56c3f45633">
-
+<br>
 <div>
   <p>Radial fade filter makes a fading for a black&white (1-D)/color (3-D) image in radial direction. In other words, as we move away from the centre of the image, the pixels fade to black. The first image of the screen capture above is the original image, the second is the fading mask and the third one is the filtered image. This was a part of a programming course called "Data analysis with Python" offered by Helsinki University. 
   </p>
