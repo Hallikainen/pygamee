@@ -57,7 +57,7 @@
 
 <hr>
 <!-- Linear and logistic regression project -->
-<h3 id="probabilistic">A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</h3>
+<h3 id="probabilistic">A research on high blood pressure and coronary artery disease (CAD)</h3>
 <!-- Linear and logistic regression project image -->
 
 <!-- Linear and logistic regression project description -->
