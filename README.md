@@ -11,7 +11,7 @@
       <a href="#radialfade">Radial fade filter for an image</a>
     </li>
     <li>
-      <a href="#probabilistic">A probabilistic research on high blood pressure and coronary artery disease (linear and logistic regression)</a>  
+      <a href="#probabilistic">A project on linear and logistic regression</a>  
     </li>  
   </ul>
 </div>
@@ -57,7 +57,7 @@
 
 <hr>
 <!-- Linear and logistic regression project -->
-<h3 id="probabilistic">A research on high blood pressure and coronary artery disease (CAD)</h3>
+<h3 id="probabilistic">A project on linear and logistic regression</h3>
 <!-- Linear and logistic regression project image -->
 
 <!-- Linear and logistic regression project description -->
