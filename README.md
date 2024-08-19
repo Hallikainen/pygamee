@@ -25,7 +25,7 @@
 <div>
   <p>RoboJump 3000 is a classic platformer game where the player controls a robot that needs to jump from one platform to another to stay in the game. The goal is to collect as many coins as possible. The difficulty increases incrementally due to the presence of ghosts (known as "mörkö") and the increasing speed of the platforms. This game project was a part of course called "Python programming MOOC" offered by Helsinki University. 
   </p>
-  <p>The animation of the game was created with a Python module called <a href="https://en.wikipedia.org/wiki/Pygame">Pygame</a>. The logic in the code is briefly the following:
+  <p>The animation of the game was created with a Python module called <a href="https://en.wikipedia.org/wiki/Pygame">Pygame</a>. The logic in the code is the following:
     <ul>
       <li>The platforms, coins, and ghosts are represented as groups of images, with their coordinates defined in a dictionary.</li>  
       <li>All elements (except for the robot) move downward at a predefined speed, which increases incrementally and makes it harder to stay in the game.</li>
@@ -38,15 +38,16 @@
 <h3 id="radial_fade">Radial fade filter for an image</h3>
 
 <img width="265" alt="image" src="https://github.com/user-attachments/assets/4a3036cf-b2b9-4ec5-a871-cd56c3f45633">
+
 <br>
 <div>
-  <p>Radial fade filter makes a fading for a black&white (1-D)/color (3-D) image in radial direction. In other words, as we move away from the centre of the image, the pixels fade to black. The first image of the screen capture above is the original image, the second is the fading mask and the third one is the filtered image. This was a part of a programming course called "Data analysis with Python" offered by Helsinki University. 
+  <p>A radial fade filter applies a fading effect to a black-and-white (1-D) or color (3-D) image in a radial direction. In other words, as we move away from the center of the image, the pixels gradually fade to black. The first image in the screen capture is the original image, the second is the fading mask, and the third is the filtered image. This filter was part of a programming course called "Data Analysis with Python," offered by Helsinki University.
   </p>
-  <p>The filter was written in Python and the logic of the code is briefly as follows:
+  <p>The filter was written in Python, and the logic of the code is as follows:
     <ul>
-      <li>A mask array is created for the image that has a radial distance from the center of the image scaled to the range from 0 to 1 as the third dimension. The first and the second dimensions are the height and width of each pixel correspondingly.</li>  
-      <li>The values in the mask array are inversed to make the values close to the center be close to 1 and the values further from the center close to 0.</li>
-      <li>The third dimension of the mask array is converted to 3-D to be compatible with RGB images. Then the mask array is multiplied with the original image.</li>
+      <li>A mask array is created for the image, where each value represents the radial distance from the center, scaled to the range of 0 to 1. The first and the second dimensions correspond to the height and width of each pixel respectively.</li>  
+      <li>The values in the mask array are then inverted, so that values closer to the center are near 1, and the values further from the center close to 0.</li>
+      <li>The third dimension of the mask array is expanded to 3-D to be compatible with RGB images. Finally, the mask array is multiplied with the original image to apply the fade effect.</li>
     </ul>
   </p>
 </div>
