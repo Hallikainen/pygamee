@@ -23,7 +23,7 @@
 ![image](https://github.com/user-attachments/assets/f7a3ef32-4f99-4c6f-8a43-d7c74293b82e)
 
 <div>
-  <p>RoboJump 3000 is a classic platformer game where the player controls a robot that needs to jump from one platform to another to stay in the game. The goal is to collect as many coins as possible. The difficulty increases incrementally due to the presence of ghosts (known as "mörkö") and the increasing speed of the platforms. This game project was a part of a programming course offered by Helsinki University. 
+  <p>RoboJump 3000 is a classic platformer game where the player controls a robot that needs to jump from one platform to another to stay in the game. The goal is to collect as many coins as possible. The difficulty increases incrementally due to the presence of ghosts (known as "mörkö") and the increasing speed of the platforms. This game project was a part of course called "Python programming MOOC" offered by Helsinki University. 
   </p>
   <p>The animation of the game was created with a Python module called <a href="https://en.wikipedia.org/wiki/Pygame">Pygame</a>. The logic in the code is briefly the following:
     <ul>
@@ -35,18 +35,18 @@
 </div>
 
 
-<h3 id="radial_fade">Radial fade filter for an image</h3>h3>
+<h3 id="radial_fade">Radial fade filter for an image</h3>
 
 <img width="265" alt="image" src="https://github.com/user-attachments/assets/4a3036cf-b2b9-4ec5-a871-cd56c3f45633">
 
 <div>
-  <p>Radial fade filter makes a fading for an image in radial direction. In other words, as we move away from the centre of the image, the pixels fade to black. This was a part of a programming course offered by Helsinki University. 
+  <p>Radial fade filter makes a fading for a black&white (1-D)/color (3-D) image in radial direction. In other words, as we move away from the centre of the image, the pixels fade to black. This was a part of a programming course called "Data analysis with Python" offered by Helsinki University. 
   </p>
-  <p>The filter was written in Python and the logic of the code is briefly the following:
+  <p>The filter was written in Python and the logic of the code is briefly as follows:
     <ul>
-      <li></li>  
-      <li>All elements (except for the robot) move downward at a predefined speed, which increases incrementally and makes it harder to stay in the game.</li>
-      <li>A while loop updates the coordinates of these elements in each iteration. It also checks if the robot is moving, if it collects a coin or encounters a ghost, or if it falls out of the game.</li>
+      <li>A mask array is created for the image that has a radial distance from the center of the image scaled to the range from 0 to 1 as the third dimension. The first and the second dimensions are the height and width of each pixel correspondingly.</li>  
+      <li>The values in the mask array are inversed to make the values close to the center be close to 1 and the values further from the center close to 0.</li>
+      <li>The third dimension of the mask array is converted to 3-D to be compatible with RGB images. Then the mask array is multiplied with the original image.</li>
     </ul>
   </p>
 </div>
