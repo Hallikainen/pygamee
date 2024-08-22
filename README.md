@@ -44,7 +44,7 @@
 
 <!-- Radial fade description -->
 <div>
-  <p>A radial fade filter applies a fading effect to a black-and-white (1-D) or color (3-D) image in a radial direction. In other words, as we move away from the center of the image, the pixels gradually fade to black. The first image in the screen capture is the original image, the second is the fading mask, and the third is the filtered image. This filter was part of a programming course called "Data Analysis with Python," offered by Helsinki University.
+  <p>Radial fade filter applies a fading effect to a black-and-white (1-D) or color (3-D) image in a radial direction. In other words, as we move away from the center of the image, the pixels gradually fade to black. The first image in the screen capture is the original image, the second is the fading mask, and the third is the filtered image. This filter was part of a programming course called "Data Analysis with Python," offered by Helsinki University.
   </p>
   <p>The filter was written in Python, and the logic of the code is as follows:
     <ul>
@@ -60,7 +60,12 @@
 <h3 id="probabilistic">A project on linear and logistic regression</h3>
 <!-- Linear and logistic regression project image -->
 
-<!-- Linear and logistic regression project description -->
+<img width="1183" alt="image" src="https://github.com/user-attachments/assets/d385c055-9eac-48fc-8b51-9081ca053294">
 
+<!-- Linear and logistic regression project description -->
+<div>
+  <p>Linear and logistic regression project focused on applying models of linear and logistic regression to the context of predicting heart diseases.</p>
+  
+</div>
 
 
