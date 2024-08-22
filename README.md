@@ -64,7 +64,15 @@
 
 <!-- Linear and logistic regression project description -->
 <div>
-  <p>Linear and logistic regression project focused on applying models of linear and logistic regression to the context of predicting heart diseases. The data is a subset Framingham heart study (conducted in 1948) and it consist of variables such as age, weight, blood pressure, cholesterol to mention a few. The project was the final exercise of a programming course called "Data Analysis with Python", offered by Helsinki University.</p>
+  <p>Linear and logistic regression project focused on applying linear and logistic regression models to the context of predicting heart diseases. The data is a subset Framingham heart study (n=1394) and it consist of variables such as age, weight, blood pressure, cholesterol to mention a few. The project was the final exercise of a programming course called "Data Analysis with Python", offered by Helsinki University.
+  </p>
+  <p>
+    The project report is written in Jupyter Notebook and here are some of the key elements of the report:
+    <ul>
+      <li>Ordinary Least Square (OLS) model was used to model e.g. the dependence of Systolic blood pressure on weight</li>  
+      <li>Generalized Linear Model (GLM) was used to model e.g. the probability of high blood pressure on weight per gender and age group (see the plot above).</li>
+    </ul>
+  </p>
   
 </div>
 
