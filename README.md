@@ -64,7 +64,7 @@
 
 <!-- Linear and logistic regression project description -->
 <div>
-  <p>Linear and logistic regression project focused on applying models of linear and logistic regression to the context of predicting heart diseases.</p>
+  <p>Linear and logistic regression project focused on applying models of linear and logistic regression to the context of predicting heart diseases. The data is a subset Framingham heart study (conducted in 1948) and it consist of variables such as age, weight, blood pressure, cholesterol to mention a few. The project was the final exercise of a programming course called "Data Analysis with Python", offered by Helsinki University.</p>
   
 </div>
 
